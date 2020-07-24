@@ -12,20 +12,16 @@
 <body>
     <div class="container">
         <header class="header">
-            <div class="header__logo">
-                <img src="" alt="Logo VB">
+            <div class="header__element--1">
+                <div class="header__logo"></div>
+                <h1 class="header__title">Víctor Blog</h1>
             </div>
-            <h1 class="header__title">
-                Víctor Blog
-            </h1>
-            <nav class="header__menu">
-                <ul class="menu">
-                    <li class="menu__item"><a class="menu__link" href="#"><span class="menu__icon icon-home"></span>Inicio</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#"><span class="menu__icon icon-printer"></span>Blog</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#"><span class="menu__icon icon-rocket"></span>Proyectos</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#"><span class="menu__icon icon-mail"></span>Contacto</a></li>
-                </ul>
-            </nav>
+            <div class="header__element--2">
+                <a class="menu__link" href="#"><span class="menu__icon icon-home"></span>Inicio</a>
+                <a class="menu__link" href="#"><span class="menu__icon icon-printer"></span>Blog</a>
+                <a class="menu__link" href="#"><span class="menu__icon icon-rocket"></span>Proyectos</a>
+                <a class="menu__link notMobile" href="#"><span class="menu__icon icon-mail"></span>Contacto</a>
+            </div>
         </header>
         <main class="main">
             <h2 class="main__title">
@@ -69,13 +65,14 @@
         <footer class="footer">
             <nav class="socialWeb">
                 <ul class="socialMenu">
-                    <li class="socialMenu__item"><span class="socialMenu__icon icon-facebook2"></span></li>
-                    <li class="socialMenu__item"><span class="socialMenu__icon icon-twitter"></span></li>
-                    <li class="socialMenu__item"><span class="socialMenu__icon icon-youtube"></span></li>
+                    <li class="socialMenu__item"><a href="#"><span class="socialMenu__icon icon-facebook2"></span></a></li>
+                    <li class="socialMenu__item"><a href="#"><span class="socialMenu__icon icon-twitter"></span></a></li>
+                    <li class="socialMenu__item"><a href="#"><span class="socialMenu__icon icon-youtube"></span></a></li>
                 </ul>
             </nav>
             <div class="bottomNav">
                 <a class="bottomNav__link" href=""><span class="bottomNav__icon icon-home"></span></a>
+                <a class="bottomNav__link" href=""><span class="bottomNav__icon icon-mail"></span></a>
             </div>
         </footer>
     </div>

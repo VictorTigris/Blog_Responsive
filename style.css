@@ -1,0 +1,119 @@
+:root {
+    --header-bg-color: rgb(53, 68, 93);
+    --header-font-color: rgb(255, 255, 255);
+    --nav-bg-color: rgb(255, 81, 0);
+    --nav-bg-color-hover: rgb(177, 41, 0);
+    --font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.header {
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: var(--header-bg-color);
+    display: flex;
+}
+
+/*||||||||||||||||||||||||||||||||HEADER--1||||||||||||||||||||||||||||||*/
+
+.header__element--1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+}
+.header__logo {
+    background-image: url(./img/VB.png);
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+}
+.header__title {
+    color: var(--header-font-color);
+    font-family: var(--font-family);
+    font-weight: lighter;
+    display: none;
+}
+
+/*||||||||||||||||||||||||||||||||HEADER--1||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||HEADER--2||||||||||||||||||||||||||||||*/
+
+.header__element--2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    height: 30px;
+}
+.menu__link {
+    color: var(--header-font-color);
+    background-color: var(--nav-bg-color);
+    font-family: var(--font-family);
+    padding: 15px;
+    text-decoration: none;
+}
+.menu__icon {
+    padding-right: 10px;
+}
+.notMobile {
+    display: none;
+}
+.menu__link:hover {
+    background-color: var(--nav-bg-color-hover);
+    padding: 20px 15px 20px;
+    font-size: 1.2em;
+}
+
+/*||||||||||||||||||||||||||||||||HEADER--2||||||||||||||||||||||||||||||*/
+
+.main {
+    padding: 20px;
+    background-color: wheat;
+}
+
+
+
+
+/*||||||||||||||||||||||||||||||||MEDIA QUERIES||||||||||||||||||||||||||||||*/
+
+@media screen and (min-width: 700px) {
+    .header {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .header__element--1 {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 20px;
+        height: 100px;
+    }
+    .header__logo {
+        height: 80px;
+        width: 80px;
+    }
+    .header__element--2 {
+        height: 100px;
+        align-items: center;
+        padding-right: 20px;
+    }
+    .notMobile {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .header__title {
+        display: block;
+        padding-left: 10px;
+        align-self: flex-end;
+    }
+    .menu__link {
+        padding: 15px 25px 15px;
+        font-size: 1.08em;
+    }
+}
+
+/*||||||||||||||||||||||||||||||||MEDIA QUERIES||||||||||||||||||||||||||||||*/
