@@ -120,6 +120,19 @@ body {
 .section__article {
     border-bottom: 1px solid var(--aside-bg-color);
 }
+.section__article__title--5 {
+    font-size: 1.2em;
+    color: var(--nav-bg-color);
+}
+.toBlogContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.toBlog {
+    display: inline-block;
+    text-decoration: none;
+    text-align: right;
+}
 
 /*------------------------------------MAIN---------------------------------*/
 
