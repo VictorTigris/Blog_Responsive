@@ -1,20 +1,32 @@
+* {
+    box-sizing: border-box;
+}
 :root {
-    --element-bg-color: rgb(53, 68, 93);
-    --element-font-color: rgb(255, 255, 255);
+/*HEADER AND FOOTER*/
+    --banners-bg-color: rgb(53, 68, 93);
+    --banners-font-color: rgb(255, 255, 255);
     --nav-bg-color: rgb(255, 81, 0);
-    --nav-bg-color-hover: rgb(177, 41, 0);
-    --font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --nav-bg-color-hover: rgb(159, 51, 0);
+/*HEADER AND FOOTER*/
 
+/*MAIN*/
+    --main-bg-color: rgb(235, 233, 230);
+/*MAIN*/
+/*ASIDE*/
+    --aside-bg-color: rgb(194, 189, 179);
+/*ASIDE*/
+
+
+    --font-nav: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-text: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 /*SECONDARY-COLORS*/
     --fb-color: #3b5998;
     --tw-color: #00acee;
     --yt-color: #c4302b;
 /*SECONDARY-COLORS*/
 }
-
-
 body {
-    background-color: wheat;
+    background-color: var(--aside-bg-color);
 }
 .container {
     display: flex;
@@ -31,7 +43,7 @@ body {
 .header {
     width: 100%;
     flex-wrap: wrap;
-    background-color: var(--element-bg-color);
+    background-color: var(--banners-bg-color);
     display: flex;
     align-self: flex-start;
     z-index: 1;
@@ -56,8 +68,8 @@ body {
     border-radius: 30px;
 }
 .header__title {
-    color: var(--element-font-color);
-    font-family: var(--font-family);
+    color: var(--banners-font-color);
+    font-family: var(--font-nav);
     font-weight: lighter;
     display: none;
 }
@@ -74,9 +86,9 @@ body {
     height: 30px;
 }
 .menu__link {
-    color: var(--element-font-color);
+    color: var(--banners-font-color);
     background-color: var(--nav-bg-color);
-    font-family: var(--font-family);
+    font-family: var(--font-nav);
     padding: 15px;
     text-decoration: none;
 }
@@ -101,7 +113,12 @@ body {
 
 .main {
     width: 100%;
-    padding: 0 20px;
+    padding: 20px;
+    background-color: var(--main-bg-color);
+    font-family: var(--font-text);
+}
+.section__article {
+    border-bottom: 1px solid var(--aside-bg-color);
 }
 
 /*------------------------------------MAIN---------------------------------*/
@@ -112,7 +129,62 @@ body {
 
 .aside {
     width: 100%;
-    
+    background-color: var(--aside-bg-color);
+    font-family: var(--font-nav);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 20px;
+}
+.titleAside {
+    display: none;
+}
+.aside__article {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+.onlyDesktop1, .onlyDesktop2 {
+    padding: 25px 20px 20px;
+    margin: 0;
+    color: white;
+    position: relative;
+    height: 100%;
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, 0.52);
+    transition: 0.3s;
+}
+.aside__articleText {
+    margin: 0;
+    background-color: var(--main-bg-color);
+    padding: 10px 0;
+    width: 90%;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+}
+.aside__article--1 {
+    text-decoration: none;
+    background-image: url(./img/advert1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 150px;
+    border: 3px solid var(--main-bg-color);
+    overflow: hidden;
+}
+.aside__article--2 {
+    text-decoration: none;
+    background-image: url(./img/advert2.png);
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 150px;
+    border: 3px solid var(--main-bg-color);
+    overflow: hidden;
 }
 
 /*-----------------------------------ASIDE---------------------------------*/
@@ -125,7 +197,7 @@ body {
     width: 100%;
     align-self: flex-end;
     display: flex;
-    background-color: var(--element-bg-color);
+    background-color: var(--banners-bg-color);
     padding: 10px;
     justify-content: space-between;
 }
@@ -141,7 +213,7 @@ body {
     display: flex;
     height: auto;
     border-radius: 5px;
-    background-color: wheat;
+    background-color: var(--main-bg-color);
     justify-content: space-around;
     align-items: center;
 }
@@ -175,7 +247,7 @@ body {
     font-size: 1.2em;
     padding: 5px 11px 2px;
     text-decoration: none;
-    color: var(--element-font-color);
+    color: var(--banners-font-color);
 }
 .bottomNav__link:hover {
     background-color: var(--nav-bg-color-hover);
@@ -190,6 +262,17 @@ body {
 
 /*||||||||||||||||||||||||||||||||MEDIA QUERIES||||||||||||||||||||||||||||||*/
 @media screen and (min-width: 500px) {
+    .aside__articleText {
+        width: 80%;
+    }
+    .aside__article--1 {
+        width: 80%;
+        height: 200px;
+    }
+    .aside__article--2 {
+        width: 80%;
+        height: 200px;
+    }
     .copy {
         display: block;
         align-self: flex-end;
@@ -220,6 +303,27 @@ body {
     }
 }
 @media screen and (min-width: 850px) {
+    .main {
+        width: 75%;
+    }
+    .aside {
+        width: 25%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .aside__articleText {
+        width: 95%;
+    }
+    .aside__article--1 {
+        width: 95%;
+        height: 150px;
+    }
+    .aside__article--2 {
+        width: 95%;
+        height: 150px;
+    }
+
+    
     .header__title {
         display: block;
         padding-left: 10px;
@@ -231,6 +335,37 @@ body {
     }
 }
 @media screen and (min-width: 1300px) {
+    .titleAside {
+        display: block;
+        align-self: center;
+        margin: 25px 0 0;
+    }
+    .aside__articleText {
+        display: none;
+    }
+    .aside__article--1 {
+        filter: grayscale(100);
+        transition: 0.4s;
+    }
+    .aside__article--1:hover {
+        filter: grayscale(0);
+    }
+    .aside__article--1:hover .onlyDesktop1 {
+        top: 0;
+        transition: 0.3s;
+    }
+    .aside__article--2 {
+        background-position-y: 60%;
+        transition: 0.4s;
+        filter: grayscale(100);
+    }
+    .aside__article--2:hover {
+        filter: grayscale(0);
+    }
+    .aside__article--2:hover .onlyDesktop2 {
+        top: 0;
+        transition: 0.3s;
+    }
     .socialWeb__link--fb {
         filter: grayscale(100);
     }
